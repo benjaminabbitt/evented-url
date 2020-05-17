@@ -1,0 +1,43 @@
+syntax = "proto3";
+option java_package = "name.benjaminabbitt.evented.bookmarks";
+
+import "evented/core/evented.proto";
+import "google/protobuf/empty.proto";
+
+
+message CreateBookmarkIntent {
+  evented.core.UUID id = 1;
+  string url = 2;
+  string name = 3;
+}
+
+message DeleteBookmarkIntent {
+  evented.core.UUID id = 1;
+  uint32 sequence = 2;
+}
+
+service Bookmark {
+  /*
+  I dislike using this r prefix for remote procedure calls, but we hava all kinds of name collisions otherwise
+  (with event, command, method call, and method call parameters all having the same symantic meaning
+   */
+  rpc rCreateBookmark(CreateBookmarkIntent) returns (google.protobuf.Empty);
+  rpc rDeleteBookmark(DeleteBookmarkIntent) returns (google.protobuf.Empty);
+}
+
+message CreateBookmark {
+  string url = 1;
+  string name = 2;
+}
+
+message BookmarkCreated {
+  string url = 1;
+  string name = 2;
+
+}
+
+message DeleteBookmark{
+}
+
+message BookmarkDeleted{
+}

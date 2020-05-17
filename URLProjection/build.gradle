@@ -1,0 +1,111 @@
+buildscript {
+    ext.grpc_version = '1.29.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'com.google.protobuf' version "0.8.12"
+    id 'idea'
+}
+
+group 'name.benjaminAbbitt'
+version '0.0.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://dl.bintray.com/benjaminabbitt/maven"
+    }
+}
+
+
+dependencies {
+
+    //GRPC and Protobuf
+    compile "com.google.protobuf:protobuf-java:3.11.4"
+    compile group: 'io.grpc', name: 'grpc-all', version: '1.29.0'
+    compile 'javax.annotation:javax.annotation-api:1.3.2'
+
+    //Protobuf Dependencies
+    protobuf 'name.benjaminabbitt:evented-proto:0.0.5'
+    protobuf 'name.benjaminabbitt:evented-bookmarks-proto:0.0.2'
+    compile 'name.benjaminabbitt:evented-java:0.0.2'
+
+    //Logging
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.2'
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.9'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.7'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.7'
+
+    //Configuration
+    compile group: "org.cfg4j", name: "cfg4j-core", version: "4.4.0"
+    compile group: "org.cfg4j", name: "cfg4j-consul", version: "4.4.0"
+
+    //Unit Testing
+    testCompile 'org.mockito:mockito-core:3.3.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //BDD
+    testImplementation 'io.cucumber:cucumber-java8:5.6.0'
+    testImplementation 'io.cucumber:cucumber-junit:5.6.0'
+    testImplementation 'io.cucumber:cucumber-java:5.6.0'
+
+    //Project Into
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.3'
+
+}
+
+protobuf {
+    protoc { artifact = 'com.google.protobuf:protoc:3.11.4' }
+    plugins {
+        grpc { artifact = "io.grpc:protoc-gen-grpc-java:1.29.0" }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+                option 'enable_deprecated=false'
+            }
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/src/generated"
+}
+
+idea {
+    module {
+        sourceDirs += file("$projectDir/src/generated/main/java")
+        sourceDirs += file("$projectDir/src/generated/main/grpc")
+    }
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--strict', '--plugin', 'pretty', '--glue', 'name.benjaminabbitt.evented.bookmark', 'src/test/resources']
+        }
+    }
+}
+
+compileJava {options.encoding = "UTF-8"}
+
+java {
+    sourceCompatibility(JavaVersion.VERSION_11)
+    targetCompatibility(JavaVersion.VERSION_11)
+}

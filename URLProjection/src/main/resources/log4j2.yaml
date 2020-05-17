@@ -1,0 +1,16 @@
+---
+Configuration:
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      JsonLayout:
+        complete: true
+        compact: false
+        eventEol: true
+        includeTimeMillis: true
+  Loggers:
+    Root:
+      AppenderRef:
+        - ref: Console
+      level: trace
