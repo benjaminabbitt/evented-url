@@ -10,21 +10,14 @@ buildscript {
 
 plugins {
     id 'java'
+    id 'application'
     id 'com.google.protobuf' version "0.8.12"
-    id 'idea'
 }
 
 group 'name.benjaminAbbitt'
 version '0.0.0-SNAPSHOT'
 
-
-repositories {
-    mavenCentral()
-    maven {
-        url "https://dl.bintray.com/benjaminabbitt/maven"
-    }
-}
-
+mainClassName = 'name.benjaminabbitt.evented.Projector.ProjectorService'
 
 dependencies {
 
@@ -35,7 +28,7 @@ dependencies {
 
     //Protobuf Dependencies
     protobuf 'name.benjaminabbitt:evented-proto:0.0.5'
-    protobuf 'name.benjaminabbitt:evented-bookmarks-proto:0.0.2'
+    protobuf project(":URLProto")
     implementation 'name.benjaminabbitt:evented-java:0.0.2'
 
     //Logging
@@ -79,13 +72,6 @@ protobuf {
     generatedFilesBaseDir = "$projectDir/src/generated"
 }
 
-idea {
-    module {
-        sourceDirs += file("$projectDir/src/generated/main/java")
-        sourceDirs += file("$projectDir/src/generated/main/grpc")
-    }
-}
-
 configurations {
     cucumberRuntime {
         extendsFrom testImplementation
@@ -103,9 +89,4 @@ task cucumber() {
     }
 }
 
-compileJava { options.encoding = "UTF-8" }
 
-java {
-    sourceCompatibility(JavaVersion.VERSION_11)
-    targetCompatibility(JavaVersion.VERSION_11)
-}

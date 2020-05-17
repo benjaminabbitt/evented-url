@@ -2,14 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookmarksBasicProjection" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookmarksBusiness" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookmarksJava" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookmarksProjection" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookmarksProto" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/URLBusiness" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/URLProjection" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/URLProto" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/evented-url" vcs="Git" />
   </component>
 </project>

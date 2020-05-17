@@ -1,0 +1,27 @@
+plugins {
+    id 'idea'
+    id 'java'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/benjaminabbitt/maven"
+        }
+    }
+
+    idea {
+        module {
+            sourceDirs += file("$projectDir/src/generated/java")
+            sourceDirs += file("$projectDir/src/generated/grpc")
+        }
+    }
+
+    java {
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    compileJava { options.encoding = "UTF-8" }
+}

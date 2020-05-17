@@ -10,22 +10,14 @@ buildscript {
 
 plugins {
     id 'com.google.protobuf' version "0.8.12"
-    id 'idea'
-    id 'java-library'
-    id 'maven-publish'
+    id 'java'
+    id 'application'
 }
 
 group 'name.benjaminAbbitt'
 version '0.0.0-SNAPSHOT'
 
-
-repositories {
-    mavenCentral()
-    maven {
-        url "https://dl.bintray.com/benjaminabbitt/maven"
-    }
-}
-
+mainClassName = 'BusinessLogic.BookmarkServer'
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
@@ -37,7 +29,7 @@ dependencies {
 
     //Protobuf Dependencies
     protobuf 'name.benjaminabbitt:evented-proto:0.0.5'
-    protobuf 'name.benjaminabbitt:evented-bookmarks-proto:0.0.2'
+    protobuf project(":URLProto")
 
     //Logging
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.2'
@@ -71,20 +63,3 @@ protobuf {
     generatedFilesBaseDir = "$projectDir/src/generated"
 }
 
-idea {
-    module {
-        sourceDirs += file("$projectDir/src/generated/main/java")
-        sourceDirs += file("$projectDir/src/generated/main/grpc")
-    }
-}
-
-
-compileJava {
-    options.encoding = "UTF-8"
-    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
-}
-
-java {
-    sourceCompatibility(JavaVersion.VERSION_11)
-    targetCompatibility(JavaVersion.VERSION_11)
-}
