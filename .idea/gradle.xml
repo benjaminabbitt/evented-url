@@ -10,9 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/URLBusiness" />
-            <option value="$PROJECT_DIR$/URLProjection" />
-            <option value="$PROJECT_DIR$/URLProto" />
+            <option value="$PROJECT_DIR$/Business" />
+            <option value="$PROJECT_DIR$/Projection" />
+            <option value="$PROJECT_DIR$/Proto" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

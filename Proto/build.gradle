@@ -1,0 +1,86 @@
+buildscript {
+    ext.grpc_version = '1.29.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'
+    }
+}
+
+plugins {
+    id 'java'
+    id "com.jfrog.bintray" version "1.8.5"
+    id 'java-library'
+    id 'maven-publish'
+    id 'com.google.protobuf' version "0.8.12"
+    id 'idea'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://dl.bintray.com/benjaminabbitt/maven"
+    }
+}
+
+dependencies {
+    protobuf 'name.benjaminabbitt:evented-proto:0.0.5'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    implementation "com.google.protobuf:protobuf-java:3.11.4"
+    implementation group: 'io.grpc', name: 'grpc-all', version: '1.29.0'
+}
+
+group = "name.benjaminabbitt"
+def artifactName = "evented-bookmarks-proto"
+version = "0.0.2"
+
+
+protobuf {
+    protoc { artifact = 'com.google.protobuf:protoc:3.11.4' }
+    plugins {
+        grpc { artifact = "io.grpc:protoc-gen-grpc-java:1.29.0" }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+                option 'enable_deprecated=false'
+            }
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/src/"
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId group
+            artifactId artifactName
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('name', 'evented-proto')
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_KEY')
+    publications = ['MyPublication']
+    pkg {
+        repo = "maven"
+        name = artifactName
+        licenses = ["GPL-3.0 "]
+        vcsUrl = "https://github.com/benjaminabbitt/evented"
+    }
+}
+
+idea {
+    module {
+        sourceDirs += file("$projectDir/src/main/java")
+        sourceDirs += file("$projectDir/src/main/grpc")
+    }
+}
+
