@@ -139,7 +139,7 @@ public final class BookmarkGrpc {
 
     /**
      * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we hava all kinds of name collisions otherwise
+     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
      *(with event, command, method call, and method call parameters all having the same symantic meaning
      * </pre>
      */
@@ -191,7 +191,7 @@ public final class BookmarkGrpc {
 
     /**
      * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we hava all kinds of name collisions otherwise
+     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
      *(with event, command, method call, and method call parameters all having the same symantic meaning
      * </pre>
      */
@@ -226,7 +226,7 @@ public final class BookmarkGrpc {
 
     /**
      * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we hava all kinds of name collisions otherwise
+     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
      *(with event, command, method call, and method call parameters all having the same symantic meaning
      * </pre>
      */
@@ -259,7 +259,7 @@ public final class BookmarkGrpc {
 
     /**
      * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we hava all kinds of name collisions otherwise
+     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
      *(with event, command, method call, and method call parameters all having the same symantic meaning
      * </pre>
      */

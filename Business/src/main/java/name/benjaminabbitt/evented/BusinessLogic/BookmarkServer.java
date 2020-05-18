@@ -158,7 +158,7 @@ public class BookmarkServer {
     }
 
     public static void main(String[] args) throws Exception {
-        BookmarkServer server = new BookmarkServer(8000);
+        BookmarkServer server = new BookmarkServer(1748);
         server.start();
         server.blockUntilShutdown();
     }
