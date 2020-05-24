@@ -4,7 +4,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import io.grpc.stub.StreamObserver;
 import name.benjaminabbitt.evented.BusinessLogic.Bookmarks.Bookmark;
 import name.benjaminabbitt.evented.BusinessLogic.Bookmarks.StateMachine.NotCreatedBookmark;
-import name.benjaminabbitt.evented.EventedService;
+import name.benjaminabbitt.evented.server.EventedService;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 import name.benjaminabbitt.evented.business.BusinessLogicGrpc;
 import name.benjaminabbitt.evented.core.Evented;

@@ -1,9 +1,7 @@
-package name.benjaminabbitt.evented;
+package name.benjaminabbitt.evented.server;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import io.jaegertracing.internal.JaegerTracer;
-import io.opentracing.Span;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.grpc.TracingServerInterceptor;
 import org.apache.logging.log4j.LogManager;
@@ -26,22 +24,14 @@ public class EventedServer {
     private final Logger logger;
     private final Tracer tracer;
 
-    public EventedServer(int port, List<EventedService> services) {
-        this(ServerBuilder.forPort(port), services);
+    public EventedServer(int port, List<EventedService> services, Tracer tracer) {
+        this(ServerBuilder.forPort(port), services, tracer);
     }
 
-    public EventedServer(ServerBuilder<?> serverBuilder, List<EventedService> services) {
+    public EventedServer(ServerBuilder<?> serverBuilder, List<EventedService> services, Tracer tracer) {
         this.logger = LogManager.getLogger();
         this.configuration = setupConfiguration();
-
-        this.tracer = new JaegerTracer.Builder("java-test").build();
-        Span span = this.tracer.buildSpan("test").start();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        span.finish();
+        this.tracer = tracer;
 
         TracingServerInterceptor tracingInterceptor = TracingServerInterceptor
                 .newBuilder()

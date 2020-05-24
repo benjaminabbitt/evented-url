@@ -1,4 +1,4 @@
-package name.benjaminabbitt.evented;
+package name.benjaminabbitt.evented.server;
 
 import io.grpc.BindableService;
 
