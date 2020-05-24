@@ -1,5 +1,6 @@
 package name.benjaminabbitt.evented.BusinessLogic.Bookmarks;
 
+import name.benjaminabbitt.evented.BusinessLogic.Bookmarks.StateMachine.InvalidState;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 import name.benjaminabbitt.evented.core.Evented;
 

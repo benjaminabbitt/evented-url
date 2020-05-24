@@ -26,6 +26,11 @@ dependencies {
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.7'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.7'
 
+    //Tracing
+    implementation 'io.opentracing.contrib:opentracing-grpc:0.2.1'
+    implementation 'io.jaegertracing:jaeger-core:1.2.0'
+    implementation 'io.jaegertracing:jaeger-client:1.2.0'
+
     //Configuration
     implementation 'info.picocli:picocli:4.2.0'
     annotationProcessor 'info.picocli:picocli-codegen:4.2.0'

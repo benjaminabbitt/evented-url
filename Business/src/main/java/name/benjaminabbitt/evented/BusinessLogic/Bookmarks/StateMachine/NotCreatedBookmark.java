@@ -1,7 +1,8 @@
-package name.benjaminabbitt.evented.BusinessLogic.Bookmarks;
+package name.benjaminabbitt.evented.BusinessLogic.Bookmarks.StateMachine;
 
 import com.google.protobuf.Any;
 import com.google.protobuf.Timestamp;
+import name.benjaminabbitt.evented.BusinessLogic.Bookmarks.Bookmark;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 import name.benjaminabbitt.evented.core.Evented;
 

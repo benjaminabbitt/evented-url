@@ -1,5 +1,6 @@
-package name.benjaminabbitt.evented.BusinessLogic.Bookmarks;
+package name.benjaminabbitt.evented.BusinessLogic.Bookmarks.StateMachine;
 
+import name.benjaminabbitt.evented.BusinessLogic.Bookmarks.Bookmark;
 import name.benjaminabbitt.evented.core.Evented;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 
