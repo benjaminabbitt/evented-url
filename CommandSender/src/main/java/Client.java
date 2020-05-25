@@ -22,8 +22,9 @@ public class Client {
         TracingClientInterceptor tracingClientInterceptor = TracingClientInterceptor
                 .newBuilder()
                 .withTracer(tracer)
+                .withVerbosity()
                 .build();
-        BusinessLogicGrpc.BusinessLogicBlockingStub stub = BusinessLogicGrpc.newBlockingStub(channel);
+        BusinessLogicGrpc.BusinessLogicBlockingStub stub = BusinessLogicGrpc.newBlockingStub(tracingClientInterceptor.intercept(channel));
         Client client = new Client(stub);
         Bookmarks.CreateBookmarkIntent test = Bookmarks.CreateBookmarkIntent.newBuilder().setName("test").setUrl("http://test.example").build();
         Evented.CommandBook commandBook = Evented.CommandBook.newBuilder().setCover(Evented.Cover.newBuilder().setRoot(Evented.UUID.newBuilder().build()).setDomain("").build()).addPages(Evented.CommandPage.newBuilder().setCommand(Any.pack(test)).setSequence(0).build()).build();
