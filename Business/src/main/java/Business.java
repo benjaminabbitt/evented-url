@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import static name.benjaminabbitt.evented.opentracing.TracerSupport.getTracer;
 
-public class Application {
+public class Business {
     public static void main(String[] args) throws Exception {
         EventedServer server = new EventedServer(1748, Arrays.asList(new EventedService[]{new BookmarkService()}), getTracer());
         server.start();

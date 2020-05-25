@@ -10,6 +10,7 @@ import name.benjaminabbitt.evented.core.CommandHandlerGrpc;
 import name.benjaminabbitt.evented.core.Evented;
 import name.benjaminabbitt.evented.opentracing.TracerSupport;
 
+
 public class ClientCommandHandler {
     public static void main(String[] args) {
         String target = "localhost:1747";
@@ -23,7 +24,9 @@ public class ClientCommandHandler {
         CommandHandlerGrpc.CommandHandlerBlockingStub stub = CommandHandlerGrpc.newBlockingStub(tracingClientInterceptor.intercept(channel));
         Bookmarks.CreateBookmark test = Bookmarks.CreateBookmark.newBuilder().setName("test").setUrl("http://test.example").build();
         Evented.CommandBook commandBook = Evented.CommandBook.newBuilder().setCover(Evented.Cover.newBuilder().setRoot(UUIDConverter.generate()).setDomain("").build()).addPages(Evented.CommandPage.newBuilder().setCommand(Any.pack(test)).setSequence(0).build()).build();
-        stub.handle(commandBook);
+        Evented.SynchronousProcessingResponse response = stub.handle(commandBook);
+        System.out.println(response);
+        channel.shutdownNow();
         System.out.println("Hello World");
     }
 }

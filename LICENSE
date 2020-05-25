@@ -17,27 +17,27 @@ General Public License, and the "GNU GPL" refers to version 3 of the GNU
 General Public License.
 
   "The Library" refers to a covered work governed by this License,
-other than an Application or a Combined Work as defined below.
+other than an Business or a Combined Work as defined below.
 
-  An "Application" is any work that makes use of an interface provided
+  An "Business" is any work that makes use of an interface provided
 by the Library, but which is not otherwise based on the Library.
 Defining a subclass of a class defined by the Library is deemed a mode
 of using an interface provided by the Library.
 
   A "Combined Work" is a work produced by combining or linking an
-Application with the Library.  The particular version of the Library
+Business with the Library.  The particular version of the Library
 with which the Combined Work was made is also called the "Linked
 Version".
 
   The "Minimal Corresponding Source" for a Combined Work means the
 Corresponding Source for the Combined Work, excluding any source code
 for portions of the Combined Work that, considered in isolation, are
-based on the Application, and not on the Linked Version.
+based on the Business, and not on the Linked Version.
 
-  The "Corresponding Application Code" for a Combined Work means the
-object code and/or source code for the Application, including any data
+  The "Corresponding Business Code" for a Combined Work means the
+object code and/or source code for the Business, including any data
 and utility programs needed for reproducing the Combined Work from the
-Application, but excluding the System Libraries of the Combined Work.
+Business, but excluding the System Libraries of the Combined Work.
 
   1. Exception to Section 3 of the GNU GPL.
 
@@ -47,13 +47,13 @@ without being bound by section 3 of the GNU GPL.
   2. Conveying Modified Versions.
 
   If you modify a copy of the Library, and, in your modifications, a
-facility refers to a function or data to be supplied by an Application
+facility refers to a function or data to be supplied by an Business
 that uses the facility (other than as an argument passed when the
 facility is invoked), then you may convey a copy of the modified
 version:
 
    a) under this License, provided that you make a good faith effort to
-   ensure that, in the event an Application does not supply the
+   ensure that, in the event an Business does not supply the
    function or data, the facility still operates, and performs
    whatever part of its purpose remains meaningful, or
 
@@ -62,7 +62,7 @@ version:
 
   3. Object Code Incorporating Material from Library Header Files.
 
-  The object code form of an Application may incorporate material from
+  The object code form of an Business may incorporate material from
 a header file that is part of the Library.  You may convey such object
 code under terms of your choice, provided that, if the incorporated
 material is not limited to numerical parameters, data structure
@@ -99,9 +99,9 @@ the following:
    d) Do one of the following:
 
        0) Convey the Minimal Corresponding Source under the terms of this
-       License, and the Corresponding Application Code in a form
+       License, and the Corresponding Business Code in a form
        suitable for, and under terms that permit, the user to
-       recombine or relink the Application with a modified version of
+       recombine or relink the Business with a modified version of
        the Linked Version to produce a modified Combined Work, in the
        manner specified by section 6 of the GNU GPL for conveying
        Corresponding Source.
@@ -118,9 +118,9 @@ the following:
    GNU GPL, and only to the extent that such information is
    necessary to install and execute a modified version of the
    Combined Work produced by recombining or relinking the
-   Application with a modified version of the Linked Version. (If
+   Business with a modified version of the Linked Version. (If
    you use option 4d0, the Installation Information must accompany
-   the Minimal Corresponding Source and Corresponding Application
+   the Minimal Corresponding Source and Corresponding Business
    Code. If you use option 4d1, you must provide the Installation
    Information in the manner specified by section 6 of the GNU GPL
    for conveying Corresponding Source.)
