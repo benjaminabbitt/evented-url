@@ -8,10 +8,10 @@ import name.benjaminabbitt.evented.business.BusinessLogicGrpc;
 import name.benjaminabbitt.evented.core.Evented;
 import name.benjaminabbitt.evented.opentracing.TracerSupport;
 
-public class Client {
+public class ClientBusiness {
     private final BusinessLogicGrpc.BusinessLogicBlockingStub blockingStub;
 
-    public Client(BusinessLogicGrpc.BusinessLogicBlockingStub blockingStub) {
+    public ClientBusiness(BusinessLogicGrpc.BusinessLogicBlockingStub blockingStub) {
         this.blockingStub = blockingStub;
     }
 
@@ -25,7 +25,7 @@ public class Client {
                 .withVerbosity()
                 .build();
         BusinessLogicGrpc.BusinessLogicBlockingStub stub = BusinessLogicGrpc.newBlockingStub(tracingClientInterceptor.intercept(channel));
-        Client client = new Client(stub);
+        ClientBusiness client = new ClientBusiness(stub);
         Bookmarks.CreateBookmarkIntent test = Bookmarks.CreateBookmarkIntent.newBuilder().setName("test").setUrl("http://test.example").build();
         Evented.CommandBook commandBook = Evented.CommandBook.newBuilder().setCover(Evented.Cover.newBuilder().setRoot(Evented.UUID.newBuilder().build()).setDomain("").build()).addPages(Evented.CommandPage.newBuilder().setCommand(Any.pack(test)).setSequence(0).build()).build();
         Evented.ContextualCommand ccommand = Evented.ContextualCommand.newBuilder().setCommand(commandBook).build();
