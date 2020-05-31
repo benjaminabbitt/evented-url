@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.cfg4j.provider.ConfigurationProvider;
 import org.cfg4j.provider.ConfigurationProviderBuilder;
 import org.cfg4j.source.ConfigurationSource;
+import org.cfg4j.source.consul.ConsulConfigurationSourceBuilder;
 import org.cfg4j.source.context.filesprovider.ConfigFilesProvider;
 import org.cfg4j.source.files.FilesConfigurationSource;
 
@@ -20,17 +21,12 @@ import java.util.concurrent.TimeUnit;
 
 public class EventedServer {
     private final Server server;
-    private final ConfigurationProvider configuration;
     private final Logger logger;
     private final Tracer tracer;
 
-    public EventedServer(int port, List<EventedService> services, Tracer tracer) {
-        this(ServerBuilder.forPort(port), services, tracer);
-    }
 
-    public EventedServer(ServerBuilder<?> serverBuilder, List<EventedService> services, Tracer tracer) {
+    public EventedServer(ServerBuilder<?> serverBuilder, List<EventedService> services, EventedConfig config, Tracer tracer) {
         this.logger = LogManager.getLogger();
-        this.configuration = setupConfiguration();
         this.tracer = tracer;
 
         TracingServerInterceptor tracingInterceptor = TracingServerInterceptor
@@ -45,16 +41,6 @@ public class EventedServer {
         });
         this.server = serverBuilder.build();
     }
-
-    private ConfigurationProvider setupConfiguration() {
-        ConfigFilesProvider provider = () -> Arrays.asList(Paths.get("application.yaml"));
-        ConfigurationSource source = new FilesConfigurationSource(provider);
-        ConfigurationProvider configuration = new ConfigurationProviderBuilder()
-                .withConfigurationSource(source)
-                .build();
-        return configuration;
-    }
-
 
     public void start() throws IOException {
         Runtime.getRuntime().addShutdownHook(new Thread() {

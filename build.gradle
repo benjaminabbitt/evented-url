@@ -3,6 +3,10 @@ plugins {
     id 'java'
 }
 
+repositories {
+    mavenCentral()
+}
+
 subprojects {
     repositories {
         mavenCentral()
@@ -25,3 +29,4 @@ subprojects {
 
     compileJava { options.encoding = "UTF-8" }
 }
+

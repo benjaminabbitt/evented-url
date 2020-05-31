@@ -76,7 +76,7 @@ public class BookmarkService extends BusinessLogicGrpc.BusinessLogicImplBase imp
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        throw new Exception("TODO");
+        throw new Exception("Shouldn't be here");
     }
 
     private Stream<Evented.EventPage.Builder> dispatchCommand(Evented.CommandPage page) throws Exception {
@@ -89,6 +89,6 @@ public class BookmarkService extends BusinessLogicGrpc.BusinessLogicImplBase imp
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        throw new Exception("TODO");
+        throw new Exception("Shouldn't be here");
     }
 }
