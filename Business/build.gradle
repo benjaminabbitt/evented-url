@@ -41,6 +41,10 @@ dependencies {
     implementation group: "org.cfg4j", name: "cfg4j-consul", version: "4.4.0"
 }
 
+compileJava {
+    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
+}
+
 shadowJar {
     baseName = 'app'
     classifier = ''

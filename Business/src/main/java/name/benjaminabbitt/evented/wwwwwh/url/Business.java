@@ -1,7 +1,7 @@
-package name.benjaminabbitt.evented;
+package name.benjaminabbitt.evented.wwwwwh.url;
 
 import io.grpc.ServerBuilder;
-import name.benjaminabbitt.evented.BusinessLogic.BookmarkService;
+import name.benjaminabbitt.evented.wwwwwh.url.BusinessLogic.BookmarkService;
 import name.benjaminabbitt.evented.server.*;
 import picocli.CommandLine;
 

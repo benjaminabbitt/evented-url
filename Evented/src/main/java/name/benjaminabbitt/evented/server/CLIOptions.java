@@ -1,16 +1,17 @@
 package name.benjaminabbitt.evented.server;
 
+import picocli.CommandLine;
+
 import java.io.File;
 
-import static org.apache.logging.log4j.core.tools.picocli.CommandLine.*;
 
 public class CLIOptions {
-    @Option(names = {"-f", "--configuration-file"}, paramLabel = "CONFIG_FILE", description = "configuration file")
+    @CommandLine.Option(names = {"-f", "--configuration-file"}, paramLabel = "CONFIG_FILE", description = "configuration file")
     File configFile;
 
-    @Option(names = {"-c", "--consul"}, paramLabel = "CONSUL_HOST", description = "consul host")
+    @CommandLine.Option(names = {"-c", "--consul"}, paramLabel = "CONSUL_HOST", description = "consul host")
     String consulHost;
 
-    @Option(names = {"-m", "--config-mode"}, paramLabel = "CONFIGURATION_MODE", description = "configuration mode.  \"consul\" or \"file\"")
+    @CommandLine.Option(names = {"-m", "--config-mode"}, paramLabel = "CONFIGURATION_MODE", description = "configuration mode.  \"consul\" or \"file\"")
     String configMode;
 }
