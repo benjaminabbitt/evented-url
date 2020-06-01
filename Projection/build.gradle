@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 group 'name.benjaminAbbitt'
@@ -60,4 +61,13 @@ task cucumber() {
     }
 }
 
+compileJava {
+    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
+}
+
+shadowJar {
+    baseName = 'app'
+    classifier = ''
+    archiveVersion = ''
+}
 
