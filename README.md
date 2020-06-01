@@ -15,19 +15,13 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install mongodb bitnami/mongodb
 ```
 
-###### Deprecated
-```shell script
-docker run -p 27017:27017 mongo:4.2.6-bionic
-```
+
 
 ### Run Rabbit (with debugging/management)
 ```shell script
 helm install rabbitmq bitnami/rabbitmq
 ```
-###### Deprecated
-```shell script
-docker run -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 rabbitmq:3.8.3-management-alpine
-```
+
 
 ### Run Consul 
 ```shell script
@@ -110,6 +104,7 @@ kubectl port-forward service/consul-server 8500:8500
 ```shell script
 docker build --tag name.benjaminabbitt.evented.wwwwwh.url-build .
 ```
+TODO: wrap this chain of docker builds into some build mechanism (gradle or yeoman)
 
 ### Build Business image
 Note: This uses the shared build image, above
@@ -121,4 +116,12 @@ docker build --tag name.benjaminabbitt.evented.wwwwwh.url.business .\Business
 Note: This uses the shared build image, above
 ```shell script
 docker build --tag name.benjaminabbitt.evented.wwwwwh.url.projection .\Projection
+```
+
+## Deprecated Config/Data
+```shell script
+docker run -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 rabbitmq:3.8.3-management-alpine
+```
+```shell script
+docker run -p 27017:27017 mongo:4.2.6-bionic
 ```
