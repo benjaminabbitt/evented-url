@@ -13,6 +13,8 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 Note that this chart and containerization is not my own.  Please refer to originator [here](https://github.com/bitnami/charts/tree/master/bitnami/mongodb).
 
+Feel free to use other Mongo installations.  Instructions and dependency included for the sake of getting a developer started quickly.
+
 
 #### Install Mongo
 
@@ -23,7 +25,7 @@ helm install mongodb bitnami/mongodb
 ### Run Rabbit
 Note that this chart and containerization is not my own.  Please refer to originator [here](https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq).
 
-For production use, feel free to use other Rabbit installations. 
+Feel free to use other Rabbit installations.  Instructions and dependency included for the sake of getting a developer started quickly.
 
 #### Install Rabbit
 ```shell script
