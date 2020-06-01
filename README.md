@@ -22,6 +22,11 @@ Feel free to use other Mongo installations.  Instructions and dependency include
 helm install mongodb bitnami/mongodb
 ```
 
+#### Port Forwarding
+```shell script
+kubectl port-forward service/mongodb 27017
+```
+
 ### Run Rabbit
 Note that this chart and containerization is not my own.  Please refer to originator [here](https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq).
 
@@ -30,6 +35,11 @@ Feel free to use other Rabbit installations.  Instructions and dependency includ
 #### Install Rabbit
 ```shell script
 helm install rabbitmq bitnami/rabbitmq
+```
+
+#### Port Forwarding
+```shell script
+kubectl port-forward service/rabbitmq 5672
 ```
 
 ### Run Consul 
