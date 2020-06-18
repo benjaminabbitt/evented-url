@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: url-business
+  config-client:
+    enabled: true
+consul:
+  client:
+    registration:
+      enabled: true
+    defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
+    config:
+      format: YAML

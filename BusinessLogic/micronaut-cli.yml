@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: name.benjaminabbitt.wwwwwh.url
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, config-consul, discovery-consul, docker, gradle, grpc, java, java-application, junit, log4j2, mongo-reactive, readme, security-jwt, shade, tracing-jaeger, yaml]
