@@ -129,7 +129,7 @@ TODO: wrap this chain of docker builds into some build mechanism (gradle or yeom
 ### Build Business image
 Note: This uses the shared build image, above
 ```shell script
-docker build --tag name.benjaminabbitt.evented.wwwwwh.url.business .\Business
+docker build --tag name.benjaminabbitt.evented.wwwwwh.url.businessLogic .\BusinessLogic
 ```
 
 ### Build Projection image

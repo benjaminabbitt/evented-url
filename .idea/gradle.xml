@@ -10,7 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Business" />
+            <option value="$PROJECT_DIR$/BusinessLogic" />
             <option value="$PROJECT_DIR$/CommandSender" />
             <option value="$PROJECT_DIR$/Evented" />
             <option value="$PROJECT_DIR$/Projection" />

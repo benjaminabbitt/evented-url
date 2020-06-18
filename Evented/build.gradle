@@ -31,10 +31,4 @@ dependencies {
     implementation 'io.jaegertracing:jaeger-core:1.2.0'
     implementation 'io.jaegertracing:jaeger-client:1.2.0'
 
-    //Configuration
-    implementation 'info.picocli:picocli:4.2.0'
-    annotationProcessor 'info.picocli:picocli-codegen:4.2.0'
-
-    implementation group: "org.cfg4j", name: "cfg4j-core", version: "4.4.0"
-    implementation group: "org.cfg4j", name: "cfg4j-consul", version: "4.4.0"
 }
