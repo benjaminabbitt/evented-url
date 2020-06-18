@@ -1,3 +1,9 @@
+grpc:
+  server:
+    port: 8081
+    keep-alive-time: 3h
+    max-inbound-message-size: 1024
+
 micronaut:
   security:
     endpoints:
@@ -10,10 +16,9 @@ micronaut:
         signatures:
           secret:
             generator:
-              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}"'
+              secret: 'FIXME'
 tracing:
   jaeger:
     enabled: true
     sampler:
-      probability: 0.1
-mongodb.uri: mongodb://${MONGO_HOST:localhost}:${MONGO_PORT:27017}
+      probability: 1.0

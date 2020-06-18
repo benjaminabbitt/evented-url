@@ -42,7 +42,7 @@ public class BookmarkService extends BusinessLogicGrpc.BusinessLogicImplBase {
             }
         });
 
-        ArrayList<Evented.EventPage> pages = new ArrayList<Evented.EventPage>();
+        ArrayList<Evented.EventPage> pages = new ArrayList<>();
         AtomicInteger seq = new AtomicInteger(request.getCommand().getPages(0).getSequence());
         request.getCommand().getPagesList().forEach(commandPage -> {
             try {
