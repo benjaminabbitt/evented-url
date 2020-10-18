@@ -3,6 +3,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "5.2.0"
     id "application"
     id "com.google.protobuf" version "0.8.10"
+    id "com.palantir.docker" version "0.25.0"
 }
 
 version "0.0.0-SNAPSHOT"
@@ -53,6 +54,7 @@ dependencies {
     implementation project(":Evented")
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime:2.0.0.M3")
     implementation("com.ecwid.consul:consul-api:1.4.5")
+    implementation("io.grpc:grpc-services:1.30.2")
 }
 
 test.classpath += configurations.developmentOnly
@@ -70,6 +72,7 @@ tasks.withType(JavaCompile) {
 }
 
 shadowJar {
+    minimize()
     mergeServiceFiles()
 }
 
@@ -78,6 +81,12 @@ tasks.withType(JavaExec) {
     jvmArgs('-XX:TieredStopAtLevel=1', '-Dcom.sun.management.jmxremote')
 }
 
+docker {
+    name 'url-businesslogic'
+    files tasks.shadowJar.outputs
+}
+
+tasks.docker.dependsOn(shadowJar)
 
 sourceSets {
     main {

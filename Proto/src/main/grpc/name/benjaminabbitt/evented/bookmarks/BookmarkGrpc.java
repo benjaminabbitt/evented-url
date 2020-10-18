@@ -140,7 +140,7 @@ public final class BookmarkGrpc {
     /**
      * <pre>
      *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same symantic meaning
+     *(with event, command, method call, and method call parameters all having the same semantic meaning
      * </pre>
      */
     public void rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request,
@@ -192,7 +192,7 @@ public final class BookmarkGrpc {
     /**
      * <pre>
      *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same symantic meaning
+     *(with event, command, method call, and method call parameters all having the same semantic meaning
      * </pre>
      */
     public void rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request,
@@ -227,7 +227,7 @@ public final class BookmarkGrpc {
     /**
      * <pre>
      *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same symantic meaning
+     *(with event, command, method call, and method call parameters all having the same semantic meaning
      * </pre>
      */
     public com.google.protobuf.Empty rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request) {
@@ -260,7 +260,7 @@ public final class BookmarkGrpc {
     /**
      * <pre>
      *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same symantic meaning
+     *(with event, command, method call, and method call parameters all having the same semantic meaning
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> rCreateBookmark(

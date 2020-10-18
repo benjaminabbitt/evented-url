@@ -1,0 +1,17 @@
+consumer:
+  image:
+    name: "URLProjector"
+    image: URL-Projector
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: latest
+  network:
+    externalEnabled: true
+
+coordinator:
+  image:
+    image: evented-coordinator-async-projector
+    tag: latest
+    # Overrides the image tag whose default is the chart appVersion.
+
+nameOverride: "URL"
+

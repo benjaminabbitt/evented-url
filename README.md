@@ -27,6 +27,14 @@ helm install mongodb bitnami/mongodb
 kubectl port-forward service/mongodb 27017
 ```
 
+### Extract Password
+```shell script
+kubectl get secret --namespace default mongodb -o jsonpath="{.data.mongodb-root-password}" | base64 --decode
+```
+
+### Set Password in callers
+
+
 ### Run Rabbit
 Note that this chart and containerization is not my own.  Please refer to originator [here](https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq).
 
@@ -36,6 +44,15 @@ Feel free to use other Rabbit installations.  Instructions and dependency includ
 ```shell script
 helm install rabbitmq bitnami/rabbitmq
 ```
+
+### Extract Password
+```shell script
+echo "Username      : user"
+echo "Password      : $(kubectl get secret --namespace default rabbitmq -o jsonpath="{.data.rabbitmq-password}" | base64 --decode)"
+echo "ErLang Cookie : $(kubectl get secret --namespace default rabbitmq -o jsonpath="{.data.rabbitmq-erlang-cookie}" | base64 --decode)"
+```
+
+### Set Password in callers
 
 #### Port Forwarding
 ```shell script
@@ -136,6 +153,15 @@ docker build --tag name.benjaminabbitt.evented.wwwwwh.url.businessLogic .\Busine
 Note: This uses the shared build image, above
 ```shell script
 docker build --tag name.benjaminabbitt.evented.wwwwwh.url.projection .\Projection
+```
+
+##Run Support
+
+### Command Handler
+
+#### Test Command Handler
+```shell script
+docker run evented-commandhandler /bin/grpc_health_probe --addr=EXTERNAL_IP:1747
 ```
 
 ## Deprecated Config/Data

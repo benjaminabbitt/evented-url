@@ -92,8 +92,9 @@ public class ProjectorService {
     }
 
     public static void main(String[] args) throws Exception {
+        //TODO: get Mongo settings from Consul
         MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
-        ProjectorService server = new ProjectorService(8010, mongoClient);
+        ProjectorService server = new ProjectorService(Integer.getInteger(System.getenv("GRPC_PORT")), mongoClient);
         server.start();
         server.blockUntilShutdown();
     }

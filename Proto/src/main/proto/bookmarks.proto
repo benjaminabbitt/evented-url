@@ -19,7 +19,7 @@ message DeleteBookmarkIntent {
 service Bookmark {
   /*
   I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-  (with event, command, method call, and method call parameters all having the same symantic meaning
+  (with event, command, method call, and method call parameters all having the same semantic meaning
    */
   rpc rCreateBookmark(CreateBookmarkIntent) returns (google.protobuf.Empty);
   rpc rDeleteBookmark(DeleteBookmarkIntent) returns (google.protobuf.Empty);
