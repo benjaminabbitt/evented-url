@@ -18,14 +18,13 @@ import javax.inject.Singleton
 @Singleton
 class BookmarkService(config: BookmarkConfig) : BusinessLogicGrpc.BusinessLogicImplBase() {
     private var bookmark: Bookmark?
-    private val logger: Logger
+    private val logger: Logger = LoggerFactory.getLogger(BookmarkService::class.java)
 
     /**
      * @param request
      * @param responseObserver
      */
     override fun handle(request: Evented.ContextualCommand, responseObserver: StreamObserver<Evented.EventBook>) {
-        assert(request != null)
         request.events.pagesList.forEach(Consumer { ea: Evented.EventPage ->
             try {
                 bookmark = dispatchEvent(ea)
@@ -68,7 +67,7 @@ class BookmarkService(config: BookmarkConfig) : BusinessLogicGrpc.BusinessLogicI
     }
 
     @Throws(Exception::class)
-    private fun dispatchCommand(page: Evented.CommandPage): Stream<Evented.EventPage.Builder?>? {
+    private fun dispatchCommand(page: Evented.CommandPage): Stream<Evented.EventPage.Builder> {
         try {
             if (page.command.`is`(CreateBookmark::class.java)) {
                 return bookmark!!.handle(page.command.unpack(CreateBookmark::class.java))
@@ -82,7 +81,6 @@ class BookmarkService(config: BookmarkConfig) : BusinessLogicGrpc.BusinessLogicI
     }
 
     init {
-        logger = LoggerFactory.getLogger(BookmarkService::class.java)
         logger.debug("Bookmark Service Initialized, message = " + config.message)
         bookmark = NotCreatedBookmark()
     }

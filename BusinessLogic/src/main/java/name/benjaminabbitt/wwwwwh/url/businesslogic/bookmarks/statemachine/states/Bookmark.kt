@@ -8,11 +8,11 @@ import java.util.stream.Stream
 
 abstract class Bookmark(protected val logger: Logger) {
     @Throws(InvalidState::class)
-    abstract fun handle(bookmarkDeleted: BookmarkDeleted?): Bookmark?
+    abstract fun handle(bookmarkDeleted: BookmarkDeleted): Bookmark
     @Throws(InvalidState::class)
-    abstract fun handle(deleteBookmark: DeleteBookmark?): Stream<Evented.EventPage.Builder?>?
+    abstract fun handle(deleteBookmark: DeleteBookmark): Stream<Evented.EventPage.Builder>
     @Throws(InvalidState::class)
-    abstract fun handle(bookmarkCreated: BookmarkCreated?): Bookmark?
+    abstract fun handle(bookmarkCreated: BookmarkCreated): Bookmark
     @Throws(InvalidState::class)
-    abstract fun handle(createBookmark: CreateBookmark?): Stream<Evented.EventPage.Builder?>?
+    abstract fun handle(createBookmark: CreateBookmark): Stream<Evented.EventPage.Builder>
 }

@@ -8,22 +8,22 @@ import java.util.stream.Stream
 
 class DeletedBookmark(old: ExtantBookmark?) : Bookmark(LoggerFactory.getLogger(DeletedBookmark::class.java)) {
     @Throws(InvalidState::class)
-    override fun handle(bookmarkDeleted: BookmarkDeleted?): Bookmark? {
+    override fun handle(bookmarkDeleted: BookmarkDeleted): Bookmark {
         throw InvalidState()
     }
 
     @Throws(InvalidState::class)
-    override fun handle(deleteBookmark: DeleteBookmark?): Stream<Evented.EventPage.Builder?>? {
+    override fun handle(deleteBookmark: DeleteBookmark): Stream<Evented.EventPage.Builder> {
         throw InvalidState()
     }
 
     @Throws(InvalidState::class)
-    override fun handle(bookmarkCreated: BookmarkCreated?): Bookmark? {
+    override fun handle(bookmarkCreated: BookmarkCreated): Bookmark {
         throw InvalidState()
     }
 
     @Throws(InvalidState::class)
-    override fun handle(createBookmark: CreateBookmark?): Stream<Evented.EventPage.Builder?>? {
+    override fun handle(createBookmark: CreateBookmark): Stream<Evented.EventPage.Builder> {
         throw InvalidState()
     }
 }
