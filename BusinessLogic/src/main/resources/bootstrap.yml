@@ -1,12 +1,7 @@
 micronaut:
   application:
-    name: url-business
-  config-client:
-    enabled: true
+    name: ${APP_NAME}
 consul:
   client:
-    registration:
-      enabled: true
-    defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
-    config:
-      format: YAML
+    #default-zone: ${CONSUL_HOST:consul-server}:${CONSUL_PORT:8500}
+    default-zone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:80}

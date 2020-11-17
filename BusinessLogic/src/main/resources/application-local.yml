@@ -1,6 +1,6 @@
 grpc:
   server:
-    port: 8081
+    port: 1748
     keep-alive-time: 3h
     max-inbound-message-size: 1024
 
@@ -16,9 +16,19 @@ micronaut:
         signatures:
           secret:
             generator:
-              secret: 'FIXME'
+              secret: ${JWT_SECRET}
+  application:
+    name: ${APP_NAME}
+
 tracing:
   jaeger:
     enabled: true
     sampler:
       probability: 1.0
+
+consul:
+  client:
+    registration:
+      enabled: true
+    default-zone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:80}
+

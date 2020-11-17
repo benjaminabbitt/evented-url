@@ -1,4 +1,5 @@
 plugins {
+    id "org.jetbrains.kotlin.jvm"
     id "net.ltgt.apt-eclipse" version "0.21"
     id "com.github.johnrengelman.shadow" version "5.2.0"
     id "application"
@@ -55,6 +56,9 @@ dependencies {
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime:2.0.0.M3")
     implementation("com.ecwid.consul:consul-api:1.4.5")
     implementation("io.grpc:grpc-services:1.30.2")
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
+    implementation "com.ecwid.consul:consul-api:1.4.5"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test.classpath += configurations.developmentOnly
@@ -104,5 +108,15 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins { grpc {} }
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
