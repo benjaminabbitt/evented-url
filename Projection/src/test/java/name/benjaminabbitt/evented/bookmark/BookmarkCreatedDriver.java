@@ -9,8 +9,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.grpc.stub.StreamObserver;
-import name.benjaminabbitt.evented.Projector.Projector.BookmarkProjector;
-import name.benjaminabbitt.evented.Projector.ProjectorService;
+import name.benjaminabbitt.evented.EnhancedProtoUUID;
+import name.benjaminabbitt.evented.projector.BookmarkProjector;
+import name.benjaminabbitt.evented.ProjectorService;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 import name.benjaminabbitt.evented.core.Evented;
 
@@ -43,7 +44,7 @@ public class BookmarkCreatedDriver {
         Evented.EventBook eb = Evented.EventBook.newBuilder()
                 .setCover(Evented.Cover.newBuilder()
                         .setDomain("")
-                        .setRoot(name.benjaminabbitt.evented.java.UUIDAdapters.uuuidToeuuid(id))
+                        .setRoot(new EnhancedProtoUUID(id).getNetworkId())
                 ).addPages(Evented.EventPage.newBuilder()
                         .setSynchronous(false)
                         .setCreatedAt(Timestamps.fromNanos(System.nanoTime()))

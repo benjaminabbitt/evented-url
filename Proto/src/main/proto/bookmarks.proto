@@ -4,40 +4,28 @@ option java_package = "name.benjaminabbitt.evented.bookmarks";
 import "evented/core/evented.proto";
 import "google/protobuf/empty.proto";
 
+service Bookmark {
+  rpc createBookmark(CreateBookmark) returns (google.protobuf.Empty);
+  rpc deleteBookmark(DeleteBookmark) returns (google.protobuf.Empty);
+}
 
-message CreateBookmarkIntent {
+message CreateBookmark {
   evented.core.UUID id = 1;
   string url = 2;
   string name = 3;
 }
 
-message DeleteBookmarkIntent {
+message BookmarkCreated{
   evented.core.UUID id = 1;
-  uint32 sequence = 2;
-}
-
-service Bookmark {
-  /*
-  I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-  (with event, command, method call, and method call parameters all having the same semantic meaning
-   */
-  rpc rCreateBookmark(CreateBookmarkIntent) returns (google.protobuf.Empty);
-  rpc rDeleteBookmark(DeleteBookmarkIntent) returns (google.protobuf.Empty);
-}
-
-message CreateBookmark {
-  string url = 1;
-  string name = 2;
-}
-
-message BookmarkCreated {
-  string url = 1;
-  string name = 2;
+  string url = 2;
+  string name = 3;
 
 }
 
 message DeleteBookmark{
+  evented.core.UUID id = 1;
 }
 
 message BookmarkDeleted{
+  evented.core.UUID id = 1;
 }

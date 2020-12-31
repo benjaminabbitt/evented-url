@@ -14,8 +14,8 @@ public final class Bookmarks {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CreateBookmarkIntentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CreateBookmarkIntent)
+  public interface CreateBookmarkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CreateBookmark)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -58,18 +58,18 @@ public final class Bookmarks {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code CreateBookmarkIntent}
+   * Protobuf type {@code CreateBookmark}
    */
-  public  static final class CreateBookmarkIntent extends
+  public  static final class CreateBookmark extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CreateBookmarkIntent)
-      CreateBookmarkIntentOrBuilder {
+      // @@protoc_insertion_point(message_implements:CreateBookmark)
+      CreateBookmarkOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CreateBookmarkIntent.newBuilder() to construct.
-    private CreateBookmarkIntent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CreateBookmark.newBuilder() to construct.
+    private CreateBookmark(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CreateBookmarkIntent() {
+    private CreateBookmark() {
       url_ = "";
       name_ = "";
     }
@@ -78,7 +78,7 @@ public final class Bookmarks {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CreateBookmarkIntent();
+      return new CreateBookmark();
     }
 
     @java.lang.Override
@@ -86,7 +86,7 @@ public final class Bookmarks {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateBookmarkIntent(
+    private CreateBookmark(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -150,15 +150,15 @@ public final class Bookmarks {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmarkIntent_descriptor;
+      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmark_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmarkIntent_fieldAccessorTable
+      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmark_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.Builder.class);
+              name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -308,1553 +308,16 @@ public final class Bookmarks {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent)) {
-        return super.equals(obj);
-      }
-      name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent) obj;
-
-      if (hasId() != other.hasId()) return false;
-      if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
-      }
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasId()) {
-        hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
-      }
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CreateBookmarkIntent}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CreateBookmarkIntent)
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmarkIntent_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmarkIntent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.Builder.class);
-      }
-
-      // Construct using name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (idBuilder_ == null) {
-          id_ = null;
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
-        url_ = "";
-
-        name_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmarkIntent_descriptor;
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent getDefaultInstanceForType() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent build() {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent buildPartial() {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent(this);
-        if (idBuilder_ == null) {
-          result.id_ = id_;
-        } else {
-          result.id_ = idBuilder_.build();
-        }
-        result.url_ = url_;
-        result.name_ = name_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent) {
-          return mergeFrom((name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent other) {
-        if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          mergeId(other.getId());
-        }
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private name.benjaminabbitt.evented.core.Evented.UUID id_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       * @return Whether the id field is set.
-       */
-      public boolean hasId() {
-        return idBuilder_ != null || id_ != null;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       * @return The id.
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
-        if (idBuilder_ == null) {
-          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
-        } else {
-          return idBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
-        if (idBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          id_ = value;
-          onChanged();
-        } else {
-          idBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder setId(
-          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
-        if (idBuilder_ == null) {
-          id_ = builderForValue.build();
-          onChanged();
-        } else {
-          idBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
-        if (idBuilder_ == null) {
-          if (id_ != null) {
-            id_ =
-              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
-          } else {
-            id_ = value;
-          }
-          onChanged();
-        } else {
-          idBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder clearId() {
-        if (idBuilder_ == null) {
-          id_ = null;
-          onChanged();
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
-        
-        onChanged();
-        return getIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
-        if (idBuilder_ != null) {
-          return idBuilder_.getMessageOrBuilder();
-        } else {
-          return id_ == null ?
-              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
-        }
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
-          getIdFieldBuilder() {
-        if (idBuilder_ == null) {
-          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
-                  getId(),
-                  getParentForChildren(),
-                  isClean());
-          id_ = null;
-        }
-        return idBuilder_;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <code>string url = 2;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string url = 2;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string url = 2;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string url = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string url = 2;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 3;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 3;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 3;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 3;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:CreateBookmarkIntent)
-    }
-
-    // @@protoc_insertion_point(class_scope:CreateBookmarkIntent)
-    private static final name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent();
-    }
-
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CreateBookmarkIntent>
-        PARSER = new com.google.protobuf.AbstractParser<CreateBookmarkIntent>() {
-      @java.lang.Override
-      public CreateBookmarkIntent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateBookmarkIntent(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<CreateBookmarkIntent> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateBookmarkIntent> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DeleteBookmarkIntentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:DeleteBookmarkIntent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     * @return Whether the id field is set.
-     */
-    boolean hasId();
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     * @return The id.
-     */
-    name.benjaminabbitt.evented.core.Evented.UUID getId();
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     */
-    name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder();
-
-    /**
-     * <code>uint32 sequence = 2;</code>
-     * @return The sequence.
-     */
-    int getSequence();
-  }
-  /**
-   * Protobuf type {@code DeleteBookmarkIntent}
-   */
-  public  static final class DeleteBookmarkIntent extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:DeleteBookmarkIntent)
-      DeleteBookmarkIntentOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DeleteBookmarkIntent.newBuilder() to construct.
-    private DeleteBookmarkIntent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private DeleteBookmarkIntent() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DeleteBookmarkIntent();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DeleteBookmarkIntent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              name.benjaminabbitt.evented.core.Evented.UUID.Builder subBuilder = null;
-              if (id_ != null) {
-                subBuilder = id_.toBuilder();
-              }
-              id_ = input.readMessage(name.benjaminabbitt.evented.core.Evented.UUID.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(id_);
-                id_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 16: {
-
-              sequence_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_DeleteBookmarkIntent_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_DeleteBookmarkIntent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private name.benjaminabbitt.evented.core.Evented.UUID id_;
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     * @return Whether the id field is set.
-     */
-    public boolean hasId() {
-      return id_ != null;
-    }
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     * @return The id.
-     */
-    public name.benjaminabbitt.evented.core.Evented.UUID getId() {
-      return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
-    }
-    /**
-     * <code>.evented.core.UUID id = 1;</code>
-     */
-    public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
-      return getId();
-    }
-
-    public static final int SEQUENCE_FIELD_NUMBER = 2;
-    private int sequence_;
-    /**
-     * <code>uint32 sequence = 2;</code>
-     * @return The sequence.
-     */
-    public int getSequence() {
-      return sequence_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (id_ != null) {
-        output.writeMessage(1, getId());
-      }
-      if (sequence_ != 0) {
-        output.writeUInt32(2, sequence_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (id_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getId());
-      }
-      if (sequence_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, sequence_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent)) {
-        return super.equals(obj);
-      }
-      name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent) obj;
-
-      if (hasId() != other.hasId()) return false;
-      if (hasId()) {
-        if (!getId()
-            .equals(other.getId())) return false;
-      }
-      if (getSequence()
-          != other.getSequence()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasId()) {
-        hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
-      }
-      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getSequence();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code DeleteBookmarkIntent}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:DeleteBookmarkIntent)
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_DeleteBookmarkIntent_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_DeleteBookmarkIntent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.Builder.class);
-      }
-
-      // Construct using name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (idBuilder_ == null) {
-          id_ = null;
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
-        sequence_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_DeleteBookmarkIntent_descriptor;
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent getDefaultInstanceForType() {
-        return name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent build() {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent buildPartial() {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent(this);
-        if (idBuilder_ == null) {
-          result.id_ = id_;
-        } else {
-          result.id_ = idBuilder_.build();
-        }
-        result.sequence_ = sequence_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent) {
-          return mergeFrom((name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent other) {
-        if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          mergeId(other.getId());
-        }
-        if (other.getSequence() != 0) {
-          setSequence(other.getSequence());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private name.benjaminabbitt.evented.core.Evented.UUID id_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       * @return Whether the id field is set.
-       */
-      public boolean hasId() {
-        return idBuilder_ != null || id_ != null;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       * @return The id.
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
-        if (idBuilder_ == null) {
-          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
-        } else {
-          return idBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
-        if (idBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          id_ = value;
-          onChanged();
-        } else {
-          idBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder setId(
-          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
-        if (idBuilder_ == null) {
-          id_ = builderForValue.build();
-          onChanged();
-        } else {
-          idBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
-        if (idBuilder_ == null) {
-          if (id_ != null) {
-            id_ =
-              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
-          } else {
-            id_ = value;
-          }
-          onChanged();
-        } else {
-          idBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public Builder clearId() {
-        if (idBuilder_ == null) {
-          id_ = null;
-          onChanged();
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
-        
-        onChanged();
-        return getIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
-        if (idBuilder_ != null) {
-          return idBuilder_.getMessageOrBuilder();
-        } else {
-          return id_ == null ?
-              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
-        }
-      }
-      /**
-       * <code>.evented.core.UUID id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
-          getIdFieldBuilder() {
-        if (idBuilder_ == null) {
-          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
-                  getId(),
-                  getParentForChildren(),
-                  isClean());
-          id_ = null;
-        }
-        return idBuilder_;
-      }
-
-      private int sequence_ ;
-      /**
-       * <code>uint32 sequence = 2;</code>
-       * @return The sequence.
-       */
-      public int getSequence() {
-        return sequence_;
-      }
-      /**
-       * <code>uint32 sequence = 2;</code>
-       * @param value The sequence to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSequence(int value) {
-        
-        sequence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 sequence = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSequence() {
-        
-        sequence_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:DeleteBookmarkIntent)
-    }
-
-    // @@protoc_insertion_point(class_scope:DeleteBookmarkIntent)
-    private static final name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent();
-    }
-
-    public static name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DeleteBookmarkIntent>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteBookmarkIntent>() {
-      @java.lang.Override
-      public DeleteBookmarkIntent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteBookmarkIntent(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<DeleteBookmarkIntent> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteBookmarkIntent> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CreateBookmarkOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CreateBookmark)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-
-    /**
-     * <code>string name = 2;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 2;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-  }
-  /**
-   * Protobuf type {@code CreateBookmark}
-   */
-  public  static final class CreateBookmark extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CreateBookmark)
-      CreateBookmarkOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreateBookmark.newBuilder() to construct.
-    private CreateBookmark(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CreateBookmark() {
-      url_ = "";
-      name_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateBookmark();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CreateBookmark(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmark_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return name.benjaminabbitt.evented.bookmarks.Bookmarks.internal_static_CreateBookmark_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.Builder.class);
-    }
-
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 2;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 2;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
       if (!(obj instanceof name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark)) {
         return super.equals(obj);
       }
       name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark) obj;
 
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getName()
@@ -1870,6 +333,10 @@ public final class Bookmarks {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -2007,6 +474,12 @@ public final class Bookmarks {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (idBuilder_ == null) {
+          id_ = null;
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
         url_ = "";
 
         name_ = "";
@@ -2037,6 +510,11 @@ public final class Bookmarks {
       @java.lang.Override
       public name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark buildPartial() {
         name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark(this);
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
         result.url_ = url_;
         result.name_ = name_;
         onBuilt();
@@ -2087,6 +565,9 @@ public final class Bookmarks {
 
       public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark other) {
         if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
           onChanged();
@@ -2124,9 +605,128 @@ public final class Bookmarks {
         return this;
       }
 
+      private name.benjaminabbitt.evented.core.Evented.UUID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return The id.
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          idBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(
+          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
+          onChanged();
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
+        
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -2142,7 +742,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -2159,7 +759,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -2174,7 +774,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -2184,7 +784,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -2202,7 +802,7 @@ public final class Bookmarks {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -2218,7 +818,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -2235,7 +835,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -2250,7 +850,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -2260,7 +860,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -2333,24 +933,39 @@ public final class Bookmarks {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string url = 1;</code>
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    name.benjaminabbitt.evented.core.Evented.UUID getId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder();
+
+    /**
+     * <code>string url = 2;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 2;</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 3;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2404,12 +1019,25 @@ public final class Bookmarks {
               done = true;
               break;
             case 10: {
+              name.benjaminabbitt.evented.core.Evented.UUID.Builder subBuilder = null;
+              if (id_ != null) {
+                subBuilder = id_.toBuilder();
+              }
+              id_ = input.readMessage(name.benjaminabbitt.evented.core.Evented.UUID.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
               break;
             }
-            case 18: {
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
@@ -2447,10 +1075,33 @@ public final class Bookmarks {
               name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated.Builder.class);
     }
 
-    public static final int URL_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private name.benjaminabbitt.evented.core.Evented.UUID id_;
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+      return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+      return getId();
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 2;</code>
      * @return The url.
      */
     public java.lang.String getUrl() {
@@ -2466,7 +1117,7 @@ public final class Bookmarks {
       }
     }
     /**
-     * <code>string url = 1;</code>
+     * <code>string url = 2;</code>
      * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
@@ -2483,10 +1134,10 @@ public final class Bookmarks {
       }
     }
 
-    public static final int NAME_FIELD_NUMBER = 2;
+    public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 3;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -2502,7 +1153,7 @@ public final class Bookmarks {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 3;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -2533,11 +1184,14 @@ public final class Bookmarks {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
       if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -2548,11 +1202,15 @@ public final class Bookmarks {
       if (size != -1) return size;
 
       size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2569,6 +1227,11 @@ public final class Bookmarks {
       }
       name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated) obj;
 
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getName()
@@ -2584,6 +1247,10 @@ public final class Bookmarks {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -2721,6 +1388,12 @@ public final class Bookmarks {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (idBuilder_ == null) {
+          id_ = null;
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
         url_ = "";
 
         name_ = "";
@@ -2751,6 +1424,11 @@ public final class Bookmarks {
       @java.lang.Override
       public name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated buildPartial() {
         name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated(this);
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
         result.url_ = url_;
         result.name_ = name_;
         onBuilt();
@@ -2801,6 +1479,9 @@ public final class Bookmarks {
 
       public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated other) {
         if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkCreated.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
           onChanged();
@@ -2838,9 +1519,128 @@ public final class Bookmarks {
         return this;
       }
 
+      private name.benjaminabbitt.evented.core.Evented.UUID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return The id.
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          idBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(
+          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
+          onChanged();
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
+        
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -2856,7 +1656,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -2873,7 +1673,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -2888,7 +1688,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -2898,7 +1698,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string url = 1;</code>
+       * <code>string url = 2;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -2916,7 +1716,7 @@ public final class Bookmarks {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -2932,7 +1732,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -2949,7 +1749,7 @@ public final class Bookmarks {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -2964,7 +1764,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -2974,7 +1774,7 @@ public final class Bookmarks {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3045,6 +1845,21 @@ public final class Bookmarks {
   public interface DeleteBookmarkOrBuilder extends
       // @@protoc_insertion_point(interface_extends:DeleteBookmark)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    name.benjaminabbitt.evented.core.Evented.UUID getId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder();
   }
   /**
    * Protobuf type {@code DeleteBookmark}
@@ -3091,6 +1906,19 @@ public final class Bookmarks {
             case 0:
               done = true;
               break;
+            case 10: {
+              name.benjaminabbitt.evented.core.Evented.UUID.Builder subBuilder = null;
+              if (id_ != null) {
+                subBuilder = id_.toBuilder();
+              }
+              id_ = input.readMessage(name.benjaminabbitt.evented.core.Evented.UUID.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3123,6 +1951,29 @@ public final class Bookmarks {
               name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark.Builder.class);
     }
 
+    public static final int ID_FIELD_NUMBER = 1;
+    private name.benjaminabbitt.evented.core.Evented.UUID id_;
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+      return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+      return getId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3137,6 +1988,9 @@ public final class Bookmarks {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3146,6 +2000,10 @@ public final class Bookmarks {
       if (size != -1) return size;
 
       size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3161,6 +2019,11 @@ public final class Bookmarks {
       }
       name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark) obj;
 
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3172,6 +2035,10 @@ public final class Bookmarks {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3305,6 +2172,12 @@ public final class Bookmarks {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (idBuilder_ == null) {
+          id_ = null;
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
         return this;
       }
 
@@ -3331,6 +2204,11 @@ public final class Bookmarks {
       @java.lang.Override
       public name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark buildPartial() {
         name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark(this);
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3379,6 +2257,9 @@ public final class Bookmarks {
 
       public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark other) {
         if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3406,6 +2287,125 @@ public final class Bookmarks {
           }
         }
         return this;
+      }
+
+      private name.benjaminabbitt.evented.core.Evented.UUID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return The id.
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          idBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(
+          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
+          onChanged();
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
+        
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3463,6 +2463,21 @@ public final class Bookmarks {
   public interface BookmarkDeletedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:BookmarkDeleted)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    name.benjaminabbitt.evented.core.Evented.UUID getId();
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder();
   }
   /**
    * Protobuf type {@code BookmarkDeleted}
@@ -3509,6 +2524,19 @@ public final class Bookmarks {
             case 0:
               done = true;
               break;
+            case 10: {
+              name.benjaminabbitt.evented.core.Evented.UUID.Builder subBuilder = null;
+              if (id_ != null) {
+                subBuilder = id_.toBuilder();
+              }
+              id_ = input.readMessage(name.benjaminabbitt.evented.core.Evented.UUID.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3541,6 +2569,29 @@ public final class Bookmarks {
               name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted.class, name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted.Builder.class);
     }
 
+    public static final int ID_FIELD_NUMBER = 1;
+    private name.benjaminabbitt.evented.core.Evented.UUID id_;
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     * @return The id.
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+      return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.evented.core.UUID id = 1;</code>
+     */
+    public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+      return getId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3555,6 +2606,9 @@ public final class Bookmarks {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3564,6 +2618,10 @@ public final class Bookmarks {
       if (size != -1) return size;
 
       size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3579,6 +2637,11 @@ public final class Bookmarks {
       }
       name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted other = (name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted) obj;
 
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3590,6 +2653,10 @@ public final class Bookmarks {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3723,6 +2790,12 @@ public final class Bookmarks {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (idBuilder_ == null) {
+          id_ = null;
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
         return this;
       }
 
@@ -3749,6 +2822,11 @@ public final class Bookmarks {
       @java.lang.Override
       public name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted buildPartial() {
         name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted result = new name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted(this);
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3797,6 +2875,9 @@ public final class Bookmarks {
 
       public Builder mergeFrom(name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted other) {
         if (other == name.benjaminabbitt.evented.bookmarks.Bookmarks.BookmarkDeleted.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3824,6 +2905,125 @@ public final class Bookmarks {
           }
         }
         return this;
+      }
+
+      private name.benjaminabbitt.evented.core.Evented.UUID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> idBuilder_;
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       * @return The id.
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          idBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder setId(
+          name.benjaminabbitt.evented.core.Evented.UUID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder mergeId(name.benjaminabbitt.evented.core.Evented.UUID value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              name.benjaminabbitt.evented.core.Evented.UUID.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
+          onChanged();
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUID.Builder getIdBuilder() {
+        
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      public name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              name.benjaminabbitt.evented.core.Evented.UUID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.evented.core.UUID id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              name.benjaminabbitt.evented.core.Evented.UUID, name.benjaminabbitt.evented.core.Evented.UUID.Builder, name.benjaminabbitt.evented.core.Evented.UUIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3879,16 +3079,6 @@ public final class Bookmarks {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CreateBookmarkIntent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CreateBookmarkIntent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_DeleteBookmarkIntent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_DeleteBookmarkIntent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CreateBookmark_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3918,19 +3108,18 @@ public final class Bookmarks {
   static {
     java.lang.String[] descriptorData = {
       "\n\017bookmarks.proto\032\032evented/core/evented." +
-      "proto\032\033google/protobuf/empty.proto\"Q\n\024Cr" +
-      "eateBookmarkIntent\022\036\n\002id\030\001 \001(\0132\022.evented" +
-      ".core.UUID\022\013\n\003url\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"H\n" +
-      "\024DeleteBookmarkIntent\022\036\n\002id\030\001 \001(\0132\022.even" +
-      "ted.core.UUID\022\020\n\010sequence\030\002 \001(\r\"+\n\016Creat" +
-      "eBookmark\022\013\n\003url\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\",\n\017" +
-      "BookmarkCreated\022\013\n\003url\030\001 \001(\t\022\014\n\004name\030\002 \001" +
-      "(\t\"\020\n\016DeleteBookmark\"\021\n\017BookmarkDeleted2" +
-      "\216\001\n\010Bookmark\022@\n\017rCreateBookmark\022\025.Create" +
-      "BookmarkIntent\032\026.google.protobuf.Empty\022@" +
-      "\n\017rDeleteBookmark\022\025.DeleteBookmarkIntent" +
-      "\032\026.google.protobuf.EmptyB\'\n%name.benjami" +
-      "nabbitt.evented.bookmarksb\006proto3"
+      "proto\032\033google/protobuf/empty.proto\"K\n\016Cr" +
+      "eateBookmark\022\036\n\002id\030\001 \001(\0132\022.evented.core." +
+      "UUID\022\013\n\003url\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"L\n\017Bookm" +
+      "arkCreated\022\036\n\002id\030\001 \001(\0132\022.evented.core.UU" +
+      "ID\022\013\n\003url\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"0\n\016DeleteB" +
+      "ookmark\022\036\n\002id\030\001 \001(\0132\022.evented.core.UUID\"" +
+      "1\n\017BookmarkDeleted\022\036\n\002id\030\001 \001(\0132\022.evented" +
+      ".core.UUID2\200\001\n\010Bookmark\0229\n\016createBookmar" +
+      "k\022\017.CreateBookmark\032\026.google.protobuf.Emp" +
+      "ty\0229\n\016deleteBookmark\022\017.DeleteBookmark\032\026." +
+      "google.protobuf.EmptyB\'\n%name.benjaminab" +
+      "bitt.evented.bookmarksb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3938,42 +3127,30 @@ public final class Bookmarks {
           name.benjaminabbitt.evented.core.Evented.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         });
-    internal_static_CreateBookmarkIntent_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_CreateBookmarkIntent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CreateBookmarkIntent_descriptor,
-        new java.lang.String[] { "Id", "Url", "Name", });
-    internal_static_DeleteBookmarkIntent_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_DeleteBookmarkIntent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_DeleteBookmarkIntent_descriptor,
-        new java.lang.String[] { "Id", "Sequence", });
     internal_static_CreateBookmark_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_CreateBookmark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CreateBookmark_descriptor,
-        new java.lang.String[] { "Url", "Name", });
+        new java.lang.String[] { "Id", "Url", "Name", });
     internal_static_BookmarkCreated_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_BookmarkCreated_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BookmarkCreated_descriptor,
-        new java.lang.String[] { "Url", "Name", });
+        new java.lang.String[] { "Id", "Url", "Name", });
     internal_static_DeleteBookmark_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_DeleteBookmark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DeleteBookmark_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Id", });
     internal_static_BookmarkDeleted_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_BookmarkDeleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BookmarkDeleted_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Id", });
     name.benjaminabbitt.evented.core.Evented.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }

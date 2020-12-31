@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.14'
     }
 }
 
@@ -13,8 +13,9 @@ plugins {
     id "com.jfrog.bintray" version "1.8.5"
     id 'java-library'
     id 'maven-publish'
-    id 'com.google.protobuf' version "0.8.12"
+    id 'com.google.protobuf' version "0.8.14"
     id 'idea'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 repositories {
@@ -29,6 +30,7 @@ dependencies {
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation "com.google.protobuf:protobuf-java:3.11.4"
     implementation group: 'io.grpc', name: 'grpc-all', version: '1.29.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 group = "name.benjaminabbitt"
@@ -81,6 +83,16 @@ idea {
     module {
         sourceDirs += file("$projectDir/src/main/java")
         sourceDirs += file("$projectDir/src/main/grpc")
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 

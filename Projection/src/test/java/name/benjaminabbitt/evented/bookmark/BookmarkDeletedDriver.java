@@ -11,14 +11,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.grpc.stub.StreamObserver;
-import name.benjaminabbitt.evented.Projector.Projector.BookmarkProjector;
-import name.benjaminabbitt.evented.Projector.ProjectorService;
+import name.benjaminabbitt.evented.EnhancedProtoUUID;
+import name.benjaminabbitt.evented.projector.BookmarkProjector;
+import name.benjaminabbitt.evented.ProjectorService;
 import name.benjaminabbitt.evented.bookmarks.Bookmarks;
 import name.benjaminabbitt.evented.core.Evented;
 
 import java.util.UUID;
 
-import static name.benjaminabbitt.evented.java.UUIDAdapters.euuidTouuuid;
 import static org.mockito.Mockito.*;
 
 public class BookmarkDeletedDriver {
@@ -43,7 +43,7 @@ public class BookmarkDeletedDriver {
         id = UUID.randomUUID();
         cover = Evented.Cover.newBuilder()
                 .setDomain("")
-                .setRoot(name.benjaminabbitt.evented.java.UUIDAdapters.uuuidToeuuid(id))
+                .setRoot(new EnhancedProtoUUID(id).getNetworkId())
                 .build();
         sequence = 0;
     }
@@ -66,7 +66,7 @@ public class BookmarkDeletedDriver {
 
     @Then("The event should be marked as deleted in the database")
     public void bookmarkDeletedThen() {
-        verify(mockCollection).updateOne(Filters.eq("_id", euuidTouuuid(cover.getRoot()).toString()),
+        verify(mockCollection).updateOne(Filters.eq("_id", new EnhancedProtoUUID(cover.getRoot()).toString()),
                 Updates.combine(
                         Updates.set("deleted", true),
                         Updates.set("sequence", sequence + 1)

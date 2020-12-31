@@ -26,7 +26,7 @@ public class ClientBusiness {
                 .build();
         BusinessLogicGrpc.BusinessLogicBlockingStub stub = BusinessLogicGrpc.newBlockingStub(tracingClientInterceptor.intercept(channel));
         ClientBusiness client = new ClientBusiness(stub);
-        Bookmarks.CreateBookmarkIntent test = Bookmarks.CreateBookmarkIntent.newBuilder().setName("test").setUrl("http://test.example").build();
+        Bookmarks.CreateBookmark test = Bookmarks.CreateBookmark.newBuilder().setName("test").setUrl("http://test.example").build();
         Evented.CommandBook commandBook = Evented.CommandBook.newBuilder().setCover(Evented.Cover.newBuilder().setRoot(Evented.UUID.newBuilder().build()).setDomain("").build()).addPages(Evented.CommandPage.newBuilder().setCommand(Any.pack(test)).setSequence(0).build()).build();
         Evented.ContextualCommand command = Evented.ContextualCommand.newBuilder().setCommand(commandBook).build();
         client.blockingStub.handle(command);

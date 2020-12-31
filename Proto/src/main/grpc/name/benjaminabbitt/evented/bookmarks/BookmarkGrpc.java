@@ -27,66 +27,66 @@ public final class BookmarkGrpc {
   public static final String SERVICE_NAME = "Bookmark";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent,
-      com.google.protobuf.Empty> getRCreateBookmarkMethod;
+  private static volatile io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark,
+      com.google.protobuf.Empty> getCreateBookmarkMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "rCreateBookmark",
-      requestType = name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.class,
+      fullMethodName = SERVICE_NAME + '/' + "createBookmark",
+      requestType = name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent,
-      com.google.protobuf.Empty> getRCreateBookmarkMethod() {
-    io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent, com.google.protobuf.Empty> getRCreateBookmarkMethod;
-    if ((getRCreateBookmarkMethod = BookmarkGrpc.getRCreateBookmarkMethod) == null) {
+  public static io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark,
+      com.google.protobuf.Empty> getCreateBookmarkMethod() {
+    io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark, com.google.protobuf.Empty> getCreateBookmarkMethod;
+    if ((getCreateBookmarkMethod = BookmarkGrpc.getCreateBookmarkMethod) == null) {
       synchronized (BookmarkGrpc.class) {
-        if ((getRCreateBookmarkMethod = BookmarkGrpc.getRCreateBookmarkMethod) == null) {
-          BookmarkGrpc.getRCreateBookmarkMethod = getRCreateBookmarkMethod =
-              io.grpc.MethodDescriptor.<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent, com.google.protobuf.Empty>newBuilder()
+        if ((getCreateBookmarkMethod = BookmarkGrpc.getCreateBookmarkMethod) == null) {
+          BookmarkGrpc.getCreateBookmarkMethod = getCreateBookmarkMethod =
+              io.grpc.MethodDescriptor.<name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "rCreateBookmark"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createBookmark"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent.getDefaultInstance()))
+                  name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new BookmarkMethodDescriptorSupplier("rCreateBookmark"))
+              .setSchemaDescriptor(new BookmarkMethodDescriptorSupplier("createBookmark"))
               .build();
         }
       }
     }
-    return getRCreateBookmarkMethod;
+    return getCreateBookmarkMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent,
-      com.google.protobuf.Empty> getRDeleteBookmarkMethod;
+  private static volatile io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark,
+      com.google.protobuf.Empty> getDeleteBookmarkMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "rDeleteBookmark",
-      requestType = name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.class,
+      fullMethodName = SERVICE_NAME + '/' + "deleteBookmark",
+      requestType = name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent,
-      com.google.protobuf.Empty> getRDeleteBookmarkMethod() {
-    io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent, com.google.protobuf.Empty> getRDeleteBookmarkMethod;
-    if ((getRDeleteBookmarkMethod = BookmarkGrpc.getRDeleteBookmarkMethod) == null) {
+  public static io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark,
+      com.google.protobuf.Empty> getDeleteBookmarkMethod() {
+    io.grpc.MethodDescriptor<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark, com.google.protobuf.Empty> getDeleteBookmarkMethod;
+    if ((getDeleteBookmarkMethod = BookmarkGrpc.getDeleteBookmarkMethod) == null) {
       synchronized (BookmarkGrpc.class) {
-        if ((getRDeleteBookmarkMethod = BookmarkGrpc.getRDeleteBookmarkMethod) == null) {
-          BookmarkGrpc.getRDeleteBookmarkMethod = getRDeleteBookmarkMethod =
-              io.grpc.MethodDescriptor.<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent, com.google.protobuf.Empty>newBuilder()
+        if ((getDeleteBookmarkMethod = BookmarkGrpc.getDeleteBookmarkMethod) == null) {
+          BookmarkGrpc.getDeleteBookmarkMethod = getDeleteBookmarkMethod =
+              io.grpc.MethodDescriptor.<name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "rDeleteBookmark"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteBookmark"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent.getDefaultInstance()))
+                  name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new BookmarkMethodDescriptorSupplier("rDeleteBookmark"))
+              .setSchemaDescriptor(new BookmarkMethodDescriptorSupplier("deleteBookmark"))
               .build();
         }
       }
     }
-    return getRDeleteBookmarkMethod;
+    return getDeleteBookmarkMethod;
   }
 
   /**
@@ -138,39 +138,35 @@ public final class BookmarkGrpc {
   public static abstract class BookmarkImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same semantic meaning
-     * </pre>
      */
-    public void rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request,
+    public void createBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getRCreateBookmarkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateBookmarkMethod(), responseObserver);
     }
 
     /**
      */
-    public void rDeleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent request,
+    public void deleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getRDeleteBookmarkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteBookmarkMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getRCreateBookmarkMethod(),
+            getCreateBookmarkMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent,
+                name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark,
                 com.google.protobuf.Empty>(
-                  this, METHODID_R_CREATE_BOOKMARK)))
+                  this, METHODID_CREATE_BOOKMARK)))
           .addMethod(
-            getRDeleteBookmarkMethod(),
+            getDeleteBookmarkMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent,
+                name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark,
                 com.google.protobuf.Empty>(
-                  this, METHODID_R_DELETE_BOOKMARK)))
+                  this, METHODID_DELETE_BOOKMARK)))
           .build();
     }
   }
@@ -190,23 +186,19 @@ public final class BookmarkGrpc {
     }
 
     /**
-     * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same semantic meaning
-     * </pre>
      */
-    public void rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request,
+    public void createBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRCreateBookmarkMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateBookmarkMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void rDeleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent request,
+    public void deleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRDeleteBookmarkMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteBookmarkMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -225,21 +217,17 @@ public final class BookmarkGrpc {
     }
 
     /**
-     * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same semantic meaning
-     * </pre>
      */
-    public com.google.protobuf.Empty rCreateBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request) {
+    public com.google.protobuf.Empty createBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark request) {
       return blockingUnaryCall(
-          getChannel(), getRCreateBookmarkMethod(), getCallOptions(), request);
+          getChannel(), getCreateBookmarkMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.google.protobuf.Empty rDeleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent request) {
+    public com.google.protobuf.Empty deleteBookmark(name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark request) {
       return blockingUnaryCall(
-          getChannel(), getRDeleteBookmarkMethod(), getCallOptions(), request);
+          getChannel(), getDeleteBookmarkMethod(), getCallOptions(), request);
     }
   }
 
@@ -258,28 +246,24 @@ public final class BookmarkGrpc {
     }
 
     /**
-     * <pre>
-     *I dislike using this r prefix for remote procedure calls, but we have all kinds of name collisions otherwise
-     *(with event, command, method call, and method call parameters all having the same semantic meaning
-     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> rCreateBookmark(
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createBookmark(
+        name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark request) {
       return futureUnaryCall(
-          getChannel().newCall(getRCreateBookmarkMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateBookmarkMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> rDeleteBookmark(
-        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteBookmark(
+        name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark request) {
       return futureUnaryCall(
-          getChannel().newCall(getRDeleteBookmarkMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteBookmarkMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_R_CREATE_BOOKMARK = 0;
-  private static final int METHODID_R_DELETE_BOOKMARK = 1;
+  private static final int METHODID_CREATE_BOOKMARK = 0;
+  private static final int METHODID_DELETE_BOOKMARK = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -298,12 +282,12 @@ public final class BookmarkGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_R_CREATE_BOOKMARK:
-          serviceImpl.rCreateBookmark((name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmarkIntent) request,
+        case METHODID_CREATE_BOOKMARK:
+          serviceImpl.createBookmark((name.benjaminabbitt.evented.bookmarks.Bookmarks.CreateBookmark) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
-        case METHODID_R_DELETE_BOOKMARK:
-          serviceImpl.rDeleteBookmark((name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmarkIntent) request,
+        case METHODID_DELETE_BOOKMARK:
+          serviceImpl.deleteBookmark((name.benjaminabbitt.evented.bookmarks.Bookmarks.DeleteBookmark) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -367,8 +351,8 @@ public final class BookmarkGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BookmarkFileDescriptorSupplier())
-              .addMethod(getRCreateBookmarkMethod())
-              .addMethod(getRDeleteBookmarkMethod())
+              .addMethod(getCreateBookmarkMethod())
+              .addMethod(getDeleteBookmarkMethod())
               .build();
         }
       }

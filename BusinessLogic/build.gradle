@@ -1,10 +1,11 @@
 plugins {
     id "org.jetbrains.kotlin.jvm"
     id "net.ltgt.apt-eclipse" version "0.21"
-    id "com.github.johnrengelman.shadow" version "5.2.0"
+    id "com.github.johnrengelman.shadow" version "6.1.0"
     id "application"
     id "com.google.protobuf" version "0.8.10"
     id "com.palantir.docker" version "0.25.0"
+    id "se.thinkcode.cucumber-runner" version "0.0.8"
 }
 
 version "0.0.0-SNAPSHOT"
@@ -13,6 +14,7 @@ group "name.benjaminabbitt.wwwwwh.url"
 ext {
     protocVersion = "3.5.1"
     grpcVersion = "1.18.0"
+    cucumberVersion = "6.8.0"
 }
 
 repositories {
@@ -54,11 +56,14 @@ dependencies {
     implementation project(":Proto")
     implementation project(":Evented")
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime:2.0.0.M3")
-    implementation("com.ecwid.consul:consul-api:1.4.5")
     implementation("io.grpc:grpc-services:1.30.2")
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
     implementation "com.ecwid.consul:consul-api:1.4.5"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // Cucumber
+    testImplementation "io.cucumber:cucumber-java8:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
 }
 
 test.classpath += configurations.developmentOnly
@@ -119,4 +124,8 @@ compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+cucumber {
+    glue = 'classpath:name.benjaminabbitt'
 }

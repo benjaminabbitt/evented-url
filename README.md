@@ -32,6 +32,11 @@ kubectl port-forward service/mongodb 27017
 kubectl get secret --namespace default mongodb -o jsonpath="{.data.mongodb-root-password}" | base64 --decode
 ```
 
+```powershell script
+$encoded = kubectl get secret --namespace default mongodb -o jsonpath="{.data.mongodb-root-password}" 
+[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($encoded));
+```
+
 ### Set Password in callers
 
 
@@ -164,10 +169,55 @@ docker build --tag name.benjaminabbitt.evented.wwwwwh.url.projection .\Projectio
 docker run evented-commandhandler /bin/grpc_health_probe --addr=EXTERNAL_IP:1747
 ```
 
+###Install Command Handler
+```
+helm install --generate-name  .\evtd-ch\ -f C:\workspace\URL\config\businesslogic.yaml -f C:\workspace\URL\config\domain.yaml -f C:\workspace\URL\config\site.yam
+l --dry-run
+```
+
+
+
+
 ## Deprecated Config/Data
 ```shell script
 docker run -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 rabbitmq:3.8.3-management-alpine
 ```
 ```shell script
 docker run -p 27017:27017 mongo:4.2.6-bionic
+```
+
+##Verification and Manual Testing with Busybox on K8s
+```
+from: https://containers.goffinet.org/kubernetes-the-hard-way/docs/12-dns-addon.html
+Verification
+
+Create a busybox deployment:
+
+kubectl run busybox --image=busybox:1.28 --command -- sleep 3600
+
+List the pod created by the busybox deployment:
+
+kubectl get pods -l run=busybox
+
+    output
+
+NAME                      READY   STATUS    RESTARTS   AGE
+busybox-bd8fb7cbd-vflm9   1/1     Running   0          10s
+
+Retrieve the full name of the busybox pod:
+
+POD_NAME=$(kubectl get pods -l run=busybox -o jsonpath="{.items[0].metadata.name}")
+
+Execute a DNS lookup for the kubernetes service inside the busybox pod:
+
+kubectl exec -ti $POD_NAME -- nslookup kubernetes
+
+    output
+
+Server:    10.32.0.10
+Address 1: 10.32.0.10 kube-dns.kube-system.svc.cluster.local
+
+Name:      kubernetes
+Address 1: 10.32.0.1 kubernetes.default.svc.cluster.local
+
 ```

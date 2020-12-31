@@ -17,6 +17,23 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
         </processorPath>
+        <module name="URL.BusinessLogic.test" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/2.0.0.M3/e4a6c35f5768dcd42682c732e53d7051b9706cd4/micronaut-inject-java-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-aop/2.0.0.M3/4076d71fbd01c5041590ae07a924a224d84e8cf3/micronaut-aop-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject/2.0.0.M3/687e8f45e06a78c5467ecbad4d7626f6ec437762/micronaut-inject-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-core/2.0.0.M3/9e10a084c5c32bb257fcfd0a93405fccc0516172/micronaut-core-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.0.0-RC1/357ae0563382b46c49cdccc2ecdadf1029fe4470/spotbugs-annotations-4.0.0-RC1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.26/a78a8747147d2c5807683e76ec2b633e95c14fe9/snakeyaml-1.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/77100a62c2e6f04b53977b9f541044d7d722693d/slf4j-api-1.7.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+        </processorPath>
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -37,6 +54,44 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
         </processorPath>
         <module name="URL.BusinessLogic.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/2.0.0.M3/e4a6c35f5768dcd42682c732e53d7051b9706cd4/micronaut-inject-java-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-validation/2.0.0.M3/8914019acc129fd511cb07324a132262c3f5cdf1/micronaut-validation-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-aop/2.0.0.M3/4076d71fbd01c5041590ae07a924a224d84e8cf3/micronaut-aop-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-http/2.0.0.M3/4f30085fbf486c308da8b1426e04eb4640e64e1f/micronaut-http-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject/2.0.0.M3/687e8f45e06a78c5467ecbad4d7626f6ec437762/micronaut-inject-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-core/2.0.0.M3/9e10a084c5c32bb257fcfd0a93405fccc0516172/micronaut-core-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.0.0-RC1/357ae0563382b46c49cdccc2ecdadf1029fe4470/spotbugs-annotations-4.0.0-RC1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.26/a78a8747147d2c5807683e76ec2b633e95c14fe9/snakeyaml-1.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/77100a62c2e6f04b53977b9f541044d7d722693d/slf4j-api-1.7.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/cb855558e6271b1b32e716d24cb85c7f583ce09e/validation-api-2.0.1.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+        </processorPath>
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/2.0.0.M3/e4a6c35f5768dcd42682c732e53d7051b9706cd4/micronaut-inject-java-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-validation/2.0.0.M3/8914019acc129fd511cb07324a132262c3f5cdf1/micronaut-validation-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-aop/2.0.0.M3/4076d71fbd01c5041590ae07a924a224d84e8cf3/micronaut-aop-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-http/2.0.0.M3/4f30085fbf486c308da8b1426e04eb4640e64e1f/micronaut-http-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject/2.0.0.M3/687e8f45e06a78c5467ecbad4d7626f6ec437762/micronaut-inject-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-core/2.0.0.M3/9e10a084c5c32bb257fcfd0a93405fccc0516172/micronaut-core-2.0.0.M3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.0.0-RC1/357ae0563382b46c49cdccc2ecdadf1029fe4470/spotbugs-annotations-4.0.0-RC1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.26/a78a8747147d2c5807683e76ec2b633e95c14fe9/snakeyaml-1.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/77100a62c2e6f04b53977b9f541044d7d722693d/slf4j-api-1.7.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/cb855558e6271b1b32e716d24cb85c7f583ce09e/validation-api-2.0.1.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+        </processorPath>
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
