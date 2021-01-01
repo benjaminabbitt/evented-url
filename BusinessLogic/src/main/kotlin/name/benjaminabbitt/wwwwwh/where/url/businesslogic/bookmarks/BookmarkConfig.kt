@@ -1,4 +1,4 @@
-package name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks
+package name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks
 
 import io.micronaut.context.annotation.ConfigurationProperties
 

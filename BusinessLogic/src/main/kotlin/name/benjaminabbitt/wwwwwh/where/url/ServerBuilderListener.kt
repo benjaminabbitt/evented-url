@@ -1,4 +1,4 @@
-package name.benjaminabbitt.wwwwwh.url
+package name.benjaminabbitt.wwwwwh.where.url
 
 import io.grpc.ServerBuilder
 import io.grpc.services.HealthStatusManager

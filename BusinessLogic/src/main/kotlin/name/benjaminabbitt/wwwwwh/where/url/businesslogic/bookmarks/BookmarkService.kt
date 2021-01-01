@@ -1,11 +1,11 @@
-package name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks
+package name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks
 
 import io.grpc.stub.StreamObserver
 import name.benjaminabbitt.evented.bookmarks.Bookmarks.*
 import name.benjaminabbitt.evented.business.BusinessLogicGrpc
 import name.benjaminabbitt.evented.core.Evented
-import name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.states.Bookmark
-import name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.states.NotCreatedBookmark
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.states.Bookmark
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.states.NotCreatedBookmark
 import name.benjaminabbitt.evented.exceptions.UnmatchedCommand
 import name.benjaminabbitt.evented.exceptions.UnmatchedEvent
 import org.slf4j.Logger

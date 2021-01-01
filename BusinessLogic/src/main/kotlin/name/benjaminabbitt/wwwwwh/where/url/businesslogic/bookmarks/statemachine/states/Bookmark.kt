@@ -1,8 +1,8 @@
-package name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.states
+package name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.states
 
 import name.benjaminabbitt.evented.bookmarks.Bookmarks.*
 import name.benjaminabbitt.evented.core.Evented
-import name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.InvalidState
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.InvalidState
 import org.slf4j.Logger
 import java.util.*
 import java.util.stream.Stream

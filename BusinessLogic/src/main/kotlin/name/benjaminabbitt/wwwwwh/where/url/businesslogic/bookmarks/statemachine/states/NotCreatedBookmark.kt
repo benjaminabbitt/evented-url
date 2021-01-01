@@ -1,10 +1,10 @@
-package name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.states
+package name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.states
 
 import com.google.protobuf.Any
 import com.google.protobuf.Timestamp
 import name.benjaminabbitt.evented.bookmarks.Bookmarks.*
 import name.benjaminabbitt.evented.core.Evented
-import name.benjaminabbitt.wwwwwh.url.businesslogic.bookmarks.statemachine.InvalidState
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.InvalidState
 import org.slf4j.LoggerFactory
 import java.util.*
 import java.util.stream.Stream
