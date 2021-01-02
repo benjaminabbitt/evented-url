@@ -3,11 +3,11 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.grpc.TracingClientInterceptor;
-import name.benjaminabbitt.evented.EnhancedProtoUUID;
-import name.benjaminabbitt.evented.bookmarks.Bookmarks;
-import name.benjaminabbitt.evented.core.CommandHandlerGrpc;
-import name.benjaminabbitt.evented.core.Evented;
-import name.benjaminabbitt.evented.opentracing.TracerSupport;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.EnhancedProtoUUID;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.bookmarks.Bookmarks;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.core.CommandHandlerGrpc;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.core.Evented;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.opentracing.TracerSupport;
 
 import java.util.UUID;
 

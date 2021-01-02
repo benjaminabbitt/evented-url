@@ -3,10 +3,10 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.grpc.TracingClientInterceptor;
-import name.benjaminabbitt.evented.bookmarks.Bookmarks;
-import name.benjaminabbitt.evented.business.BusinessLogicGrpc;
-import name.benjaminabbitt.evented.core.Evented;
-import name.benjaminabbitt.evented.opentracing.TracerSupport;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.bookmarks.Bookmarks;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.business.BusinessLogicGrpc;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.core.Evented;
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.opentracing.TracerSupport;
 
 public class ClientBusiness {
     private final BusinessLogicGrpc.BusinessLogicBlockingStub blockingStub;

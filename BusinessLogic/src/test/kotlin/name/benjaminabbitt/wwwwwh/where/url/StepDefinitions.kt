@@ -1,17 +1,15 @@
 package io.cucumber.kotlin.name.benjaminabbitt.wwwwwh.where.url
 
 import com.google.protobuf.Any
-import com.google.protobuf.ByteString
 import io.cucumber.java8.En
-import name.benjaminabbitt.evented.EnhancedProtoUUID
-import name.benjaminabbitt.evented.bookmarks.Bookmarks
-import name.benjaminabbitt.evented.core.Evented
-import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.BookmarkConfig
-import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.BookmarkService
-import name.benjaminabbitt.wwwwwh.where.url.businesslogic.bookmarks.statemachine.states.Bookmark
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.EnhancedProtoUUID
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.bookmarks.Bookmarks
+import name.benjaminabbitt.wwwwwh.where.url.projection.sample.core.Evented
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.BookmarkConfig
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.BookmarkService
+import name.benjaminabbitt.wwwwwh.where.url.businesslogic.statemachine.states.Bookmark
 import org.junit.jupiter.api.Assertions.*
 import java.util.*
-import name.benjaminabbitt.evented.core.Evented.UUID as ProtoUUID
 
 class UnitStepDefinitions : En {
     private lateinit var service: BookmarkService

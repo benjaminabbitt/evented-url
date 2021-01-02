@@ -8,7 +8,7 @@ plugins {
 }
 
 version "0.0.0-SNAPSHOT"
-group "name.benjaminabbitt.wwwwwh.where.url"
+group "name.benjaminabbitt.wwwwwh.where.url.businessLogic"
 
 ext {
     protocVersion = "3.5.1"
@@ -90,7 +90,6 @@ tasks.withType(JavaExec) {
 }
 
 docker {
-    //name "${project.group.toLowerCase()}/${jar.archiveBaseName.toLowerCase()}:${version.toLowerCase()}"
     dependsOn distTar
     files tasks.distTar.outputs
     name "${group.toLowerCase()}:${version.toLowerCase()}"
